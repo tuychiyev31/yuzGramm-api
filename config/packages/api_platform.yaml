@@ -1,0 +1,22 @@
+api_platform:
+    title: 'Project name'
+    description: 'Project description'
+    version: '0.0.1'
+    formats:
+        jsonld: [ "application/ld+json" ]
+        json: [ "application/json" ]
+        multipart: [ "multipart/form-data" ]
+
+    use_symfony_listeners: true
+
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: [ 'Content-Type', 'Authorization', 'Origin' ]
+
+    swagger:
+        versions: [ 3 ]
+        api_keys:
+            apiKey:
+                name: Authorization
+                type: header
